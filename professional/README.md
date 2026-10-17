@@ -59,7 +59,6 @@ B.S. Information Sciences and Technology | May 2021
 
 ## Certifications and professional education
 
-- **AWS Certified Cloud Practitioner** - Amazon Web Services | January 2021
 - **Applied AI and Data Science Program** - MIT Professional Education | June 2026
 
 ## Public projects
