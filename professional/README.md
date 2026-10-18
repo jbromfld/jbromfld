@@ -5,7 +5,7 @@ Ann Arbor, Michigan · [Email](mailto:jbromfld@gmail.com) · [GitHub](https://gi
 
 ## Professional summary
 
-Software and DevOps engineer with 5+ years of experience designing and implementing CI/CD systems, developer tooling, and cloud-native delivery automation. Hands-on experience with Python, GitHub Actions, Jenkins, Kubernetes, Docker, Terraform, automated testing, and security and quality gates. Experienced in gathering requirements across engineering teams, producing technical designs and architecture documentation, and building reusable automation that standardizes software delivery at enterprise scale.
+Software and DevOps engineer with 5+ years of experience designing and implementing CI/CD systems, developer tooling, and cloud-native delivery automation. Hands-on experience with Python, GitHub Actions, Jenkins, Kubernetes, Docker, Terraform, automated testing, and security and quality gates. Experienced in gathering requirements across engineering teams, producing technical designs and architecture documentation, and building reusable automation that standardizes software delivery at enterprise scale. Public projects apply that engineering focus to local research agents, knowledge retrieval, and AI-assisted developer workflows.
 
 ## Professional experience
 
@@ -51,6 +51,7 @@ Software and DevOps engineer with 5+ years of experience designing and implement
 | CI/CD and automation | GitHub Actions, Jenkins, Azure DevOps, Maven, npm, Yarn, automated testing, reusable workflows |
 | Programming and scripting | Python, Bash, Groovy, Java, PowerShell |
 | Developer tooling and observability | Artifactory, Jira, Confluence, Splunk, Dynatrace |
+| Applied AI project technologies | FastAPI, Temporal, Ollama, pgvector, Elasticsearch, RAG, MCP integrations |
 
 ## Education
 
@@ -63,4 +64,12 @@ B.S. Information Sciences and Technology | May 2021
 
 ## Public projects
 
-My [portfolio](../README.md#featured-projects) includes local research agents, a CI/CD remediation memory prototype, knowledge search services, MCP tools, and a VS Code prompt assistant.
+Selected personal projects demonstrate applied AI, retrieval, and workflow engineering alongside my professional CI/CD work:
+
+- **[lalaland](https://github.com/jbromfld/lalaland) — Local research agents:** RSS briefings and detailed paper summaries using FastAPI, Temporal, Ollama, and PostgreSQL. Research processing includes evidence notes with source references, checkpointed chunks, scheduled batches, and a review dashboard.
+- **[lassy](https://github.com/jbromfld/lassy) and [lassy-extension](https://github.com/jbromfld/lassy-extension) — Knowledge retrieval in the IDE:** Documentation ingestion and hybrid vector/keyword search using FastAPI and PostgreSQL/pgvector. The VS Code extension adds an `@knowledge` chat participant with direct API and MCP modes, cited context, and client-side answer generation.
+- **[gcp-rag-proto](https://github.com/jbromfld/gcp-rag-proto) — Cloud-deployable knowledge search:** FastAPI and Streamlit application with Elasticsearch hybrid search, source management, answer feedback, and metrics. Includes Terraform for Google Cloud deployment and integrations for local models, Vertex AI, and Azure OpenAI.
+- **[cogenial-disco](https://github.com/jbromfld/cogenial-disco) — CI/CD remediation memory prototype:** Architecture and memory-store foundation for retrieving past fixes, separating remediation from validation, and retaining solutions after human review and successful CI. Agent entrypoints remain planned.
+- **[radiofed](https://github.com/jbromfld/radiofed) — Music-data experimentation:** Python pipeline for MIDI ingestion, Million Song Dataset metadata enrichment, and musical feature preparation for analysis and ML experiments.
+
+See my [portfolio](../README.md#featured-projects) for project details and engineering focus.
