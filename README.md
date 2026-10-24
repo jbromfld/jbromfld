@@ -37,15 +37,7 @@ A retrieval-augmented generation (RAG) service that scrapes documentation, chunk
 
 **Engineering focus:** configurable retrieval profiles, source citations, feedback, and integration with developer tools.
 
-The companion [lassy-extension](https://github.com/jbromfld/lassy-extension) adds an `@knowledge` participant to VS Code Chat. It retrieves context through the service or an MCP endpoint, supplies citation labels to the selected chat model, and falls back to showing retrieved context if generation fails.
-
-### [cogenial-disco](https://github.com/jbromfld/cogenial-disco) - CI/CD remediation memory prototype
-
-A prototype for retrieving past pipeline fixes and consolidating validated solutions into a searchable memory store. The design separates remediation from validation and commits memory only after a human-reviewed PR merges and CI passes. Agent entrypoints are not yet built; the repository documents the architecture, memory model, and planned remediation workflow.
-
-**Built around:** Python, PostgreSQL, pgvector, LangChain/LangGraph, and local embeddings.
-
-**Engineering focus:** reusable operational knowledge, human review, and validation before retaining a proposed fix.
+The companion [lassy-extension](https://github.com/jbromfld/lassy/tree/main/extension) adds an `@knowledge` participant to VS Code Chat. It retrieves context through the service or an MCP endpoint, supplies citation labels to the selected chat model, and falls back to showing retrieved context if generation fails.
 
 ### [gcp-rag-proto](https://github.com/jbromfld/gcp-rag-proto) - Cloud-deployable knowledge search prototype
 
@@ -54,15 +46,6 @@ A retrieval-augmented generation (RAG) application combining vector and keyword 
 **Built with:** Python, FastAPI, Streamlit, Elasticsearch, Docker, and Terraform.
 
 **Engineering focus:** configurable retrieval, model-provider integration, and infrastructure as code.
-
-## More public projects
-
-These repositories extend the portfolio into IDE integration and music-data experimentation.
-
-| Project | What it does |
-| --- | --- |
-| [lassy-extension](https://github.com/jbromfld/lassy-extension) | VS Code knowledge-search participant with direct RAG and MCP connection modes, source display, and client-side answer generation. |
-| [radiofed](https://github.com/jbromfld/radiofed) | Music data and ML experimentation repository focused on MIDI ingestion, metadata enrichment, and feature preparation for research workflows. |
 
 ## Tools and interests
 
