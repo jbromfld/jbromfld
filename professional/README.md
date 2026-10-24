@@ -60,7 +60,7 @@ B.S. Information Sciences and Technology | May 2021
 
 ## Certifications and professional education
 
-- **Applied AI and Data Science Program** - MIT Professional Education | June 2026
+- **[Applied AI and Data Science Program](https://credentials.professional.mit.edu/20b0515a-f7c0-4f78-aa66-9d336404a347#acc.ETgVPMJ0)** - MIT Professional Education | June 2026
 
 ## Public projects
 
