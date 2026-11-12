@@ -5,7 +5,7 @@ Ann Arbor, Michigan · [Email](mailto:jbromfld@gmail.com) · [GitHub](https://gi
 
 ## Professional summary
 
-Software and DevOps engineer with 5+ years of experience designing and implementing CI/CD systems, developer tooling, and cloud-native delivery automation. Hands-on experience with Python, GitHub Actions, Jenkins, Kubernetes, Docker, Terraform, automated testing, and security and quality gates. Experienced in gathering requirements across engineering teams, producing technical designs and architecture documentation, and building reusable automation that standardizes software delivery at enterprise scale. Public projects apply that engineering focus to local research agents, knowledge retrieval, and AI-assisted developer workflows.
+Software and DevOps engineer with 5+ years of experience designing and implementing CI/CD systems, developer tooling, and cloud-native delivery automation. Hands-on experience with Python, GitHub Actions, Jenkins, Kubernetes, Docker, Terraform, automated testing, and security and quality gates. Experienced in gathering requirements across engineering teams, producing technical designs and architecture documentation, and building reusable automation that standardizes software delivery at enterprise scale. Public projects apply that engineering focus to local research agents, knowledge retrieval, persistent application memory, and AI-assisted budgeting.
 
 ## Professional experience
 
@@ -64,11 +64,13 @@ B.S. Information Sciences and Technology | May 2021
 
 ## Public projects
 
-Selected personal projects demonstrate applied AI, retrieval, and workflow engineering alongside my professional CI/CD work:
+Selected personal projects demonstrate applied AI, data pipelines, and application delivery alongside my professional CI/CD work:
 
-- **[lalaland](https://github.com/jbromfld/lalaland) — Local research agents:** RSS briefings and detailed paper summaries using FastAPI, Temporal, Ollama, and PostgreSQL. Research processing includes evidence notes with source references, checkpointed chunks, scheduled batches, and a review dashboard.
-- **[lassy](https://github.com/jbromfld/lassy) and [lassy-extension](https://github.com/jbromfld/lassy/tree/main/extension) — Knowledge retrieval in the IDE:** Documentation ingestion and hybrid vector/keyword search using FastAPI and PostgreSQL/pgvector. The VS Code extension adds an `@knowledge` chat participant with direct API and MCP modes, cited context, and client-side answer generation.
-- **[gcp-rag-proto](https://github.com/jbromfld/gcp-rag-proto) — Cloud-deployable knowledge search:** FastAPI and Streamlit application with Elasticsearch hybrid search, source management, answer feedback, and metrics. Includes Terraform for Google Cloud deployment and integrations for local models, Vertex AI, and Azure OpenAI.
-- **[radiofed](https://github.com/jbromfld/radiofed) — Music-data experimentation:** Python pipeline for MIDI ingestion, Million Song Dataset metadata enrichment, and musical feature preparation for analysis and ML experiments.
+- **[lalaland](https://github.com/jbromfld/lalaland) — Local research agents:** RSS briefings, detailed paper summaries, and an optional knowledge assistant using FastAPI, Temporal, Ollama, and PostgreSQL. Combines scheduled, checkpointed research workflows with a review dashboard and Lassy-backed evidence retrieval for cited answers.
+- **[lassy](https://github.com/jbromfld/lassy) — Document indexing and retrieval:** Indexes supplied text and returns cited evidence through native stdio MCP or an optional FastAPI service. Uses offline embeddings, PostgreSQL/pgvector hybrid search, recency signals, and optional reranking, with idempotent document updates shared across clients.
+- **[babar](https://github.com/jbromfld/babar) — Persistent application memory:** Local MCP service for sourced notes, namespace-scoped recall, and explicit memory revisions using Python, PostgreSQL/pgvector, and offline embeddings. Supports application-authorized updates, consolidation, and forgetting; supplies optional advisor memory to Abacus.
+- **[abacus](https://github.com/jbromfld/abacus) — Budgeting and planning:** React/TypeScript and FastAPI application for recurring bills, statement imports, spending analysis, savings goals, and cash projections. Integrates optional Ollama PDF extraction and a budget advisor with Babar memory, with managed deployment through Argo CD.
+- **[gcp-rag-proto](https://github.com/jbromfld/gcp-rag-proto) — Cloud-deployable knowledge search:** FastAPI and Streamlit RAG prototype with documentation ingestion, Elasticsearch hybrid search, answer feedback, and metrics. Includes Terraform and Cloud Build configuration for Google Cloud, plus local, Vertex AI, and Azure OpenAI model integrations.
+- **[radiofed](https://github.com/jbromfld/radiofed) — Music-data pipelines:** Batch MIDI ingestion, Million Song Dataset metadata and genre enrichment, and musical feature extraction in Python and SQL. Prepares structured data for music analysis and machine-learning experiments.
 
 See my [portfolio](../README.md#featured-projects) for project details and engineering focus.
