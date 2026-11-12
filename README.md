@@ -23,29 +23,51 @@ I focus on systems that improve how software gets from code to production: relia
 
 ### [lalaland](https://github.com/jbromfld/lalaland) - Local research agents
 
-Two local agents turn RSS feeds into short daily briefings and research papers or articles into detailed engineering summaries. A shared dashboard supports review, ratings, and search. The research workflow uses evidence notes with page or section references, checkpointing, and scheduled batches.
+A local research platform with agents for RSS briefings, detailed paper and article summaries, and optional knowledge queries across indexed research. A shared dashboard supports source management, review, ratings, and search. Temporal workflows handle scheduled batches and checkpointed processing; the knowledge assistant uses Lassy to retrieve evidence for answers with citations.
 
 **Built with:** Python, FastAPI, Temporal, Ollama, PostgreSQL, and OpenTelemetry.
 
-**Engineering focus:** durable workflows, local inference, resumable processing, and visibility into long-running work.
+**Engineering focus:** durable workflows, local inference, source provenance, and integration between research and retrieval services.
 
-### [lassy](https://github.com/jbromfld/lassy) - Knowledge ingestion and retrieval
+### [lassy](https://github.com/jbromfld/lassy) - Local document indexing and retrieval
 
-A retrieval-augmented generation (RAG) service that scrapes documentation, chunks and embeds it in PostgreSQL/pgvector, and combines vector and keyword search. It supports Copilot-backed answers and a retrieval-only mode that returns ranked source chunks with citations for client-side generation.
+A shared retrieval service that indexes application-supplied document text and returns ranked evidence with citations and provenance. It combines local embeddings, PostgreSQL/pgvector vector and keyword search, publication recency, and optional cross-encoder reranking. Native MCP over stdio and an optional HTTP API expose the same document service; calling applications handle source collection and answer generation.
 
-**Built with:** Python, FastAPI, PostgreSQL, pgvector, and Docker.
+**Built with:** Python, PostgreSQL, pgvector, Sentence Transformers, MCP, and FastAPI.
 
-**Engineering focus:** configurable retrieval profiles, source citations, feedback, and integration with developer tools.
+**Engineering focus:** offline model loading, idempotent document updates, consistent indexing across clients, and reusable retrieval interfaces.
 
-The companion [lassy-extension](https://github.com/jbromfld/lassy/tree/main/extension) adds an `@knowledge` participant to VS Code Chat. It retrieves context through the service or an MCP endpoint, supplies citation labels to the selected chat model, and falls back to showing retrieved context if generation fails.
+### [babar](https://github.com/jbromfld/babar) - Persistent local application memory
+
+An application-memory service that stores sourced notes and recalls relevant context across conversations and restarts. Applications connect through MCP over stdio with a fixed namespace and control when memory changes are authorized. Local embeddings and text matching support retrieval, while explicit revisions, provenance, consolidation, and forgetting keep stored memory inspectable and manageable. Abacus uses it for optional advisor memory.
+
+**Built with:** Python, PostgreSQL, pgvector, Sentence Transformers, and MCP.
+
+**Engineering focus:** revision-checked writes, idempotency, atomic persistence, and application-controlled memory lifecycles.
+
+### [abacus](https://github.com/jbromfld/abacus) - Local budgeting and planning
+
+A personal budget application for recurring income and bills, statement imports, spending trends, savings goals, and cash projections. Reviewable imports and remembered payee classifications support everyday bookkeeping. Optional Ollama features add PDF extraction and a budget advisor, with Babar providing approved memory across conversations. The managed deployment uses Argo CD and packages the advisor's memory service with the application.
+
+**Built with:** React, TypeScript, Python, FastAPI, PostgreSQL, Ollama, and Argo CD.
+
+**Engineering focus:** traceable imports, consistent financial projections, database migrations, and controlled integration of local AI features.
 
 ### [gcp-rag-proto](https://github.com/jbromfld/gcp-rag-proto) - Cloud-deployable knowledge search prototype
 
-A retrieval-augmented generation (RAG) application combining vector and keyword search with source ingestion, answer feedback, and an operational metrics dashboard. It includes a local development setup and Terraform configuration for deployment to Google Cloud, with support for local models, Vertex AI, and Azure OpenAI.
+A retrieval-augmented generation (RAG) prototype with documentation ingestion, Elasticsearch vector and keyword search, answer feedback, and an operational metrics dashboard. A FastAPI service and Streamlit interface support local development, with Terraform and Cloud Build configuration for Google Cloud deployment. Model integrations support local inference, Vertex AI, and Azure OpenAI.
 
 **Built with:** Python, FastAPI, Streamlit, Elasticsearch, Docker, and Terraform.
 
-**Engineering focus:** configurable retrieval, model-provider integration, and infrastructure as code.
+**Engineering focus:** configurable retrieval, model-provider integration, source management, and infrastructure as code.
+
+### [radiofed](https://github.com/jbromfld/radiofed) - Music-data pipelines
+
+A batch-oriented Python pipeline for ingesting MIDI files, enriching records with Million Song Dataset metadata and genre labels, and extracting timing, pitch, chord, and key features. It prepares structured datasets for music analysis and machine-learning experiments.
+
+**Built with:** Python, SQL, MIDI datasets, and Million Song Dataset metadata.
+
+**Engineering focus:** repeatable ingestion, metadata enrichment, and feature preparation for research.
 
 ## Tools and interests
 
